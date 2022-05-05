@@ -1,6 +1,14 @@
 ---
 ja:
   activerecord:
+    models:
+      user: 'ユーザー'
+    attributes:
+      user:
+        username: 'ユーザー名'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード（確認）'
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -205,3 +213,7 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  attributes:
+    create_at: '作成日時'
+    update_at: '更新日時'
+

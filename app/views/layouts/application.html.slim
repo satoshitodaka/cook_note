@@ -1,12 +1,17 @@
 doctype html
 html
   head
-    title
-      | CookNote
-    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    / このメタタグは一旦コピペ
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title CookNote
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    / link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet"
+
   body
+    = render 'shared/flash_messages'
+    - if logged_in?
+      = link_to 'ログアウト', logout_path, method: :delete
     = yield
