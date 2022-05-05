@@ -11,3 +11,6 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // modul
